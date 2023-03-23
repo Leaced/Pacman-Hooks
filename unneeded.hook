@@ -7,4 +7,4 @@ Target = *
 [Action]
 Description = Possibly unneeded packages (e.g. dependency cycles)
 When = PostTransaction
-Exec = /usr/bin/bash -c "(pacman -Qqd | pacman -Rsup - && /usr/bin/echo 'uninstall all with »pacman -Qqd | pacman -Rsu -«') || /usr/bin/echo '==> None found'"
+Exec = /usr/bin/bash -c "(pacman -Qqd | pacman -Rsup - && echo 'uninstall all with »pacman -Qqd | pacman -Rsu -«') || echo '==> None found'"
