@@ -1,0 +1,11 @@
+[Trigger]
+Operation = Remove
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = *
+
+[Action]
+Description = Keep the last cache of currently installed packages
+When = PostTransaction
+Exec = /usr/bin/paccache -r

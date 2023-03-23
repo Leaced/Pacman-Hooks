@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Remove
+Operation = Upgrade
+Type = Package
+Target = *
+
+[Action]
+Description = Possibly unneeded packages (e.g. dependency cycles)
+When = PostTransaction
+Exec = /usr/bin/bash -c "(pacman -Qqd | pacman -Rsup - && /usr/bin/echo 'uninstall all with »pacman -Qqd | pacman -Rsu -«') || /usr/bin/echo '==> None found'"
