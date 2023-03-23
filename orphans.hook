@@ -8,4 +8,3 @@ Target = *
 Description = List orphans
 When = PostTransaction
 Exec = /usr/bin/bash -c "(pacman -Qtd && echo 'uninstall all with »pacman -Qtdq | pacman -Rs -«') || echo '==> None found'"
-#Exec = /usr/bin/bash -c "(/usr/bin/pacman -Qtd && /usr/bin/echo 'uninstall all with »yay -Qtdq | yay -Rns -«') || /usr/bin/echo '==> None found'"
